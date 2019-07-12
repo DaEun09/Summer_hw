@@ -1,0 +1,15 @@
+{% extends "foodBlog/base.html" %}
+
+{% block content %}
+
+    <h1>디테일 페이지</h1>
+    <div>
+        <h2>{{post.title}}</h2>
+        <p>{{post.created_date}}</p>
+        <p>{{post.text}}</p>
+
+        <a href="{% url 'edit' post.id %}">수정하기</a>
+        <a href="{% url 'delete' post.id %}">삭제하기</a>
+    </div>
+
+{% endblock %}

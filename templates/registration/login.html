@@ -1,0 +1,22 @@
+{% extends "foodBlog/base.html" %}
+{% block content %}
+
+<div class="alert alert-danger">
+    {% if form.errors %}
+    <p>아이디나 비밀번호가 맞지 않습니다. 다시 입력해주세요.</p>
+    {% endif %}
+
+    <h3 style="margin-top:25px; ">로그인</h3><br>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <button type="submit" class="btn btn-danger" style="width: 110px; margin-top: 20px">Login</button>
+    </form>
+    
+    
+</div>
+<br>
+<a href="{% url 'home' %}" style="width: 150px;" class="btn btn-outline-danger">홈으로</a>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "foodBlog/base.html" %}
+
+{% block content %}
+<br>
+<div class="card-deck">
+    <div class="card">
+        <img src="https://realfood.tesco.com/media/images/RFO-1400x919-ChickenClubSandwich-0ee77c05-5a77-49ac-a3bd-4d45e3b4dca7-0-1400x919.jpg" class="card-img-top" style="height: 250px" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">샌드위치</h5>
+            <p class="card-text">토마토랑 양상추를 넣어 샌드위치를 만들어 먹었다.</p>
+            <p class="card-text"><small class="text-muted">2019.07.09</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://t1.daumcdn.net/liveboard/shopping/6ee2b995fc1b4db6a30753370076786d.JPG" class="card-img-top" style="height: 250px" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">떡볶이</h5>
+            <p class="card-text">점심은 떡볶이를 먹었다. 떡볶이는 역시 몇번을 먹어도 맛있다.</p>
+            <p class="card-text"><small class="text-muted">2019.07.09</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://cbmpress.com/calgary/wp-content/uploads/sites/4/2017/07/chicken.jpg" class="card-img-top" alt="..." style="height: 250px">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">치킨</h5>
+            <p class="card-text">야식은 치킨~</p>
+            <p class="card-text"><small class="text-muted">2019.07.09</small></p>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="card-deck">
+    <div class="card">
+        <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/health_benefits_of_watermelon_slideshow/1800ss_thinkstock_rf_watermelon_slices.jpg?resize=650px:*" class="card-img-top" style="height: 250px" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">수박</h5>
+            <p class="card-text">여름엔 시원하게 수박~</p>
+            <p class="card-text"><small class="text-muted">2019.07.11</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="http://recipe1.ezmember.co.kr/cache/recipe/2017/01/06/2f85c886d17dac16707404ba659341711.jpg" class="card-img-top" style="height: 250px" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">스테이크</h5>
+            <p class="card-text">오늘 점심은 친구랑 스테이크를 먹었다. 또 먹고싶다.</p>
+            <p class="card-text"><small class="text-muted">2019.07.11</small></p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://t1.daumcdn.net/liveboard/dailylife/8defeeef58a04d3888ddfe03b5722000.jpg" class="card-img-top" alt="..." style="height: 250px">
+        <div class="card-body">
+            <h5 class="card-title" style="background-color: rgb(255, 241, 241)">파스타</h5>
+            <p class="card-text">아 파스타 먹고싶다.</p>
+            <p class="card-text"><small class="text-muted">2019.07.11</small></p>
+        </div>
+    </div>
+</div>
+<br><br>
+<a  href="{% url 'home' %}" class="btn btn-danger" style="width: 150px;"><i class="fas fa-home"></i>&nbsp HOME </a>
+<br><br>
+{% endblock %}

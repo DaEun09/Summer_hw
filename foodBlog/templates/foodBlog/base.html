@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ac8313b6a0.js"></script>
+    <style>
+        .big {
+            margin: 50px 300px;
+            background-image: url("https://www.weightwatchers.com/us/sites/default/files/styles/wwvs_default_image/public/article_masthead/allaboutzeropointfoods_yk_ww_080218_0spvfoods_190_1250x600.jpg?itok=Fo_ThSVk");
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .con1 {
+            background-color: white;
+            border-style: solid;
+            border-color: rgb(220, 53, 69);
+            border-radius: 15px;
+            padding: 20px;
+
+        }
+
+        .mainlist {
+            margin: 25px;
+            background-color: white;
+            padding: 30px;
+            border-color: rgb(220, 53, 69);
+            border-radius: 15px;
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body class="big">
+    <div class="con1" style="text-align: center;">
+        <div class="row">
+            <div class="col-sm-6" style="text-align: left; padding-left: 40px;">
+                <h2><i class="fas fa-utensils" style="margin: 0px 20px; color: rgb(228, 54, 71);"></i><strong>
+                        <a href="{% url 'home' %}" style="color:rgb(228, 54, 71); text-decoration: none;">
+                            Food Storage</a></strong></h2>
+            </div>
+
+            {% if user.is_active %}
+            <div class="col-sm-3" style="padding-top:9px;">
+                <p style="font-size: 20px; text-align:right;"><ins><b>
+                        {{ user.username }}</b></ins> &nbsp님 반갑습니다.</p>
+            </div>
+            <div class="col-sm-3" style=" padding-top:4px;">
+                <b><a href="{% url 'logout' %}" style="width: 150px;" class="btn btn-outline-danger">로그아웃</a></b>
+            </div>
+            {% else %}
+
+            <div class="col-sm-3">
+                <a href="{% url 'login' %}" style="width: 150px; padding-top:6px; float:right;"
+                    class="btn btn-outline-danger">로그인</a>
+            </div>
+            <div class="col-sm-3">
+                <a href="{% url 'accounts:signup' %}" style="width: 150px; padding-top: 6px; float: left;"
+                    class="btn btn-outline-danger">회원가입</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="mainlist" style="text-align: center;">
+        <p style="font-size: 23px;"><b><i><mark style="background-color: rgb(255, 238, 238);">" 오늘 먹은 것을 올려보자 ! "</mark></i></b></p>
+        <hr>
+        {% block content %}
+    </div>
+    {% endblock %}
+</body>
